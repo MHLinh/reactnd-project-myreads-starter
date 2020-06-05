@@ -5,6 +5,12 @@ import SearchBooks from './SearchBooks'
 import ListBooks from './ListBooks'
 import './App.css'
 
+const bookshelves = [
+    { key: 'currentlyReading', name: 'Currently Reading' },
+    { key: 'wantToRead', name: 'Want to Read' },
+    { key: 'read', name: 'Read' }
+];
+
 class BooksApp extends React.Component {
     state = {
         books: []
@@ -15,6 +21,10 @@ class BooksApp extends React.Component {
           .then((books) => {
             this.setState(() => ({books}))
         });
+    };
+
+    moveBook = (book, shelf) => {
+        
     };
 
     render() {
@@ -28,7 +38,11 @@ class BooksApp extends React.Component {
                     <SearchBooks/>
                 )} />
                 <Route exact path="/" render={() => (
-                    <ListBooks/>
+                    <ListBooks 
+                        bookshelves={bookshelves}
+                        books={this.state.books}
+                        onMove={this.moveBook}
+                    />
                 )}/>
             </div>
         );

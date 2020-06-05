@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types';
-
+import BookshelfChanger from './BookshelfChanger'
 /**
  * @description Represents a book
  * @constructor
@@ -16,6 +16,7 @@ class Book extends Component {
     };
 
     render() {
+        const { book, shelf, onMove } = this.props;
         return (
             <div className="book">
                 <div className="book-top">

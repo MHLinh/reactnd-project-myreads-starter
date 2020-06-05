@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Book from './Book';
 
 /**
@@ -16,7 +17,7 @@ class Bookshelf extends React.Component {
     };
 
     render() {
-        const { shelf, books, onMove } = props;
+        const { shelf, books, onMove } = this.props;
         const booksOnThisShelf = books.filter(book => book.shelf === shelf.key);
         return (
             <div className="bookshelf">
