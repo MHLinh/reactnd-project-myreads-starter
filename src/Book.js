@@ -13,7 +13,7 @@ class Book extends Component {
         book: PropTypes.object.isRequired,
         shelf: PropTypes.string.isRequired,
         onMove: PropTypes.func.isRequired
-    }
+    };
 
     render() {
         return (

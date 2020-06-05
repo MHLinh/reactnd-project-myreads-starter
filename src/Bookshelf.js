@@ -13,7 +13,8 @@ class Bookshelf extends React.Component {
         shelf: PropTypes.string.isRequired,
         books: PropTypes.array.isRequired,
         onMove: PropTypes.func.isRequired
-    }
+    };
+
     render() {
         const { shelf, books, onMove } = props;
         const booksOnThisShelf = books.filter(book => book.shelf === shelf.key);
