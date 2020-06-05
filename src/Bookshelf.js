@@ -4,7 +4,7 @@ import Book from './Book';
 /**
  * @description Represents a bookshelf
  * @constructor
- * @param {string} shelf - The name of the bookshelf
+ * @param {object} shelf - The object that stores the key and name of the bookshelf
  * @param {array} books - The array of books.
  * @param {func} onMove - The function to be called when the books is moved to another shelf.
  */
