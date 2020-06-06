@@ -70,7 +70,7 @@ class SearchBooks extends Component {
                         type="text" 
                         placeholder="Search by title or author" 
                         value={query}
-                        onChange={(event) => this.handleChange(event)}
+                        onChange={this.handleChange}
                     />
                     </div>
                     <button className="clear-search-button" onClick={this.clearSearch}>
@@ -79,6 +79,7 @@ class SearchBooks extends Component {
                 </div>
                 <SearchResults 
                     books={this.props.books}
+                    query={query}
                     searchResults={this.props.searchResults} 
                     onMove={this.props.onMove}
                 />

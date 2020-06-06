@@ -139,6 +139,12 @@ button:active {
   font-size: 1.25em;
 }
 
+.search-text {
+  text-align: center;
+  font-size: 1.25em;
+  margin: 20px 0;
+}
+
 /* books grid */
 
 .books-grid {
