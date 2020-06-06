@@ -1,6 +1,6 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import BookshelfChanger from './BookshelfChanger'
+import BookshelfChanger from './BookshelfChanger';
 /**
  * @description Represents a book
  * @constructor
@@ -24,7 +24,11 @@ class Book extends Component {
                         book.imageLinks ? book.imageLinks.thumbnail : 'icons/book-placeholder.svg'})` 
                     }}>
                     </div>
-                    <BookshelfChanger book={book} shelf={shelf} onMove={onMove}/>
+                    <BookshelfChanger 
+                        book={book} 
+                        shelf={shelf}
+                        onMove={onMove}
+                    />
                 </div>
                 <div className="book-title">{book.title}</div>
                 <div className="book-authors">

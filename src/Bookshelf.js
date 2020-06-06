@@ -3,15 +3,15 @@ import PropTypes from 'prop-types';
 import Book from './Book';
 
 /**
- * @description Represents a bookshelf
+ * @description Represents a bookshelf.
  * @constructor
- * @param {object} shelf - The object that stores the key and name of the bookshelf
+ * @param {object} shelf - The object that stores the key and name of the bookshelf.
  * @param {array} books - The array of books.
  * @param {func} onMove - The function to be called when the books is moved to another shelf.
  */
-class Bookshelf extends React.Component {
+class Bookshelf extends Component {
     static propTypes = {
-        shelf: PropTypes.string.isRequired,
+        shelf: PropTypes.object.isRequired,
         books: PropTypes.array.isRequired,
         onMove: PropTypes.func.isRequired
     };
@@ -25,7 +25,12 @@ class Bookshelf extends React.Component {
                 <div className="bookshelf-books">
                     <ol className="books-grid">
                         {booksOnThisShelf.map(book => (
-                            <Book key={book.id} book={book} shelf={shelf.key} onMove={onMove} />
+                            <Book 
+                                key={book.id} 
+                                book={book} 
+                                shelf={shelf.key} 
+                                onMove={onMove} 
+                            />
                         ))}
                     </ol>
                 </div>

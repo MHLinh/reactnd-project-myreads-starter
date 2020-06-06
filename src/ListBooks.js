@@ -1,7 +1,7 @@
-import React, {Component} from 'react'
-import {Link} from 'react-router-dom'
+import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
-import Bookshelf from './Bookshelf'
+import Bookshelf from './Bookshelf';
 
 /**
  * @description Shows the bookshelves and the books
@@ -10,7 +10,7 @@ import Bookshelf from './Bookshelf'
  * @param {array} books - The arrya of all books.
  * @param {func} onMove - The function to be called when the books is moved to another shelf.
  */
-class ListBooks extends React.Component {
+class ListBooks extends Component {
     static propTypes = {
         bookshelves: PropTypes.array.isRequired,
         books: PropTypes.array.isRequired,
