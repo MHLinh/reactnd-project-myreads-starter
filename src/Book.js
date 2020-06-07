@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import BookshelfChanger from './BookshelfChanger';
+import defaultCover from './icons/book-cover.png';
 /**
  * @description Represents a book
  * @constructor
@@ -20,7 +21,8 @@ class Book extends Component {
         return (
             <div className="book">
                 <div className="book-top">
-                    <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url(${book.imageLinks.thumbnail})` 
+                    <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url(${
+                        book.imageLinks ? book.imageLinks.thumbnail: defaultCover})` 
                     }}>
                     </div>
                     <BookshelfChanger 
