@@ -30,8 +30,9 @@ class SearchBooks extends Component {
      * @param {event} event The event of change in the input.
      */
     handleChange = (event) => {
-        this.updateQuery(event.target.value);
-        this.props.onSearch(this.state.query);
+        const query = event.target.value;
+        this.updateQuery(query);
+        this.props.onSearch(query);
     };
 
     /**
@@ -40,7 +41,7 @@ class SearchBooks extends Component {
      */
     updateQuery = (query) => {
         this.setState(() => ({
-            query: query.trim()
+            query: query
         }))
     };
 
