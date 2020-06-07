@@ -12,7 +12,7 @@ It allows you to search for books based on title and author in the provided data
 
 ```bash
 $ clone the Project - `https://github.com/MHLinh/reactnd-project-myreads-starter`
-$ cd reactnd-project-myreads
+$ enter the right directory - `cd reactnd-project-myreads`
 $ install the dependencies - `npm install`
 ```
 ## Usage
