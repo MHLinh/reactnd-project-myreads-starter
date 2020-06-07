@@ -25,12 +25,13 @@ class Bookshelf extends Component {
                 <div className="bookshelf-books">
                     <ol className="books-grid">
                         {booksOnThisShelf.map(book => (
-                            <Book 
-                                key={book.id} 
-                                book={book} 
-                                shelf={shelf.key} 
-                                onMove={onMove} 
-                            />
+                            <li key={book.id}>
+                                <Book 
+                                    book={book} 
+                                    shelf={shelf.key} 
+                                    onMove={onMove} 
+                                />
+                            </li>
                         ))}
                     </ol>
                 </div>
